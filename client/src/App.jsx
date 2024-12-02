@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import AuthLayout from './components/layout/AuthLayout'
+import RootLayout from './components/layout/RootLayout'
 const App = () => {
   return (
     <>
@@ -15,7 +16,10 @@ const App = () => {
           <Route path='register' element={<RegisterPage />} />
         </Route>
 
-        <Route path="/" element={<HomePage />} /> 
+        <Route path='/' element={<RootLayout />}>
+          <Route index element={<HomePage />} /> 
+        </Route>
+
 
         <Route path="/dashboard" element={<h1>Dashboard</h1>} />
         
