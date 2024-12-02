@@ -1,47 +1,62 @@
-import {Link} from "react-router-dom";
-import {useState} from "react";
-import axios from "axios";
+import React, { useState } from 'react'
+import { useUserStore } from '../store/useUserStore';
+import { LoaderCircle } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function RegisterPage() {
-  const [name,setName] = useState('');
-  const [email,setEmail] = useState('');
-  const [password,setPassword] = useState('');
-  async function registerUser(ev) {
-    ev.preventDefault();
-    try {
-      await axios.post('/register', {
-        name,
-        email,
-        password,
-      });
-      alert('Registration successful. Now you can log in');
-    } catch (e) {
-      alert('Registration failed. Please try again later');
-    }
+const RegisterPage = () => {
+
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    password_confirmation: '',
+  })
+
+  const { signup, loading } = useUserStore();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    signup(formData.name, formData.email, formData.password, formData.password_conformation);
   }
+
   return (
-    <div className="mt-4 grow flex items-center justify-around">
-      <div className="mb-64">
-        <h1 className="text-4xl text-center mb-4">Register</h1>
-        <form className="max-w-md mx-auto" onSubmit={registerUser}>
-          <input type="text"
-                 placeholder="John Doe"
-                 value={name}
-                 onChange={ev => setName(ev.target.value)} />
-          <input type="email"
-                 placeholder="your@email.com"
-                 value={email}
-                 onChange={ev => setEmail(ev.target.value)} />
-          <input type="password"
-                 placeholder="password"
-                 value={password}
-                 onChange={ev => setPassword(ev.target.value)} />
-          <button className="primary">Register</button>
-          <div className="text-center py-2 text-gray-500">
-            Already a member? <Link className="underline text-black" to={'/login'}>Login</Link>
-          </div>
-        </form>
+    <div className="bg-gray-100 flex justify-center items-center h-screen overflow-hidden">
+
+      <div className="w-1/2 h-screen hidden lg:block">
+        <img src="https://images.unsplash.com/photo-1604866830893-c13cafa515d5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Placeholder Image" className="object-cover w-full h-full" />
       </div>
+
+      <div className="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
+        <h1 className="text-2xl font-semibold mb-4">Sign Up</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label htmlFor="username" className="block text-gray-600">Username</label>
+            <input onChange={(e) => setFormData({ ...formData, name: e.target.value })} type="text" id="username" name="username" className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autoComplete="off" />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-gray-600">email</label>
+            <input onChange={(e) => setFormData({ ...formData, email: e.target.value })} type="email" id="email" name="email" className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autoComplete="off" />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="password" className="block text-gray-600">Password</label>
+            <input onChange={(e) => setFormData({ ...formData, password: e.target.value })} type="password" id="password" name="password" className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autoComplete="off" />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="password_confirmation" className="block text-gray-600">Confirm Password</label>
+            <input onChange={(e) => setFormData({ ...formData, password_conformation: e.target.value })} type="password" id="password_confirmation" name="password_confirmation" className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autoComplete="off" />
+          </div>
+          <button disabled={loading} type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full flex items-center justify-center">{loading ? <LoaderCircle className='animate-spin' /> : "Sign Up"}</button>
+        </form>
+        <div className="mt-6 text-blue-500 text-center">
+          <Link to="/login" className="hover:underline">Sign in Here! 👋</Link>
+        </div>
+      </div>
+
     </div>
-  );
+  )
 }
+
+export default RegisterPage

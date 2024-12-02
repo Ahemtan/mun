@@ -59,7 +59,9 @@ export const loginUserHandler = catchAsyncError(async (req, res, next) => {
   setCookies(res, accessToken, refreshToken);
 
   res.status(200).json({
-    User
+    User,
+    accessToken,
+    refreshToken
   });
 });
 
@@ -118,5 +120,6 @@ export const logoutHandler = catchAsyncError(async (req, res, next) => {
 export const getProfileHandler = catchAsyncError(async (req, res, next) => {
   res.status(200).json({
     user: req.user,
+    accessToken: req.cookies.accessToken
   });
 });
