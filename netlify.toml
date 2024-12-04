@@ -1,0 +1,4 @@
+[[redirects]]
+from="/*"
+to="/client/dist/index.html"
+status=200
