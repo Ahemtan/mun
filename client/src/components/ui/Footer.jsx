@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Footer = () => {
     return (
         <footer className="bg-gray-100">
@@ -19,19 +21,19 @@ const Footer = () => {
                         className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
                     >
                         <li>
-                            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> About </a>
+                            <Link to="#" className="text-gray-700 transition hover:text-gray-700/75" href="#"> About </Link>
                         </li>
 
                         <li>
-                            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Services </a>
+                            <Link to="#" className="text-gray-700 transition hover:text-gray-700/75" href="#"> Services </Link>
                         </li>
 
                         <li>
-                            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Projects </a>
+                            <Link to="#" className="text-gray-700 transition hover:text-gray-700/75" href="#"> Projects </Link>
                         </li>
 
                         <li>
-                            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Blog </a>
+                            <Link to="#" className="text-gray-700 transition hover:text-gray-700/75" href="#"> Blog </Link>
                         </li>
                     </ul>
                 </div>

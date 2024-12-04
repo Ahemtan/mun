@@ -12,8 +12,6 @@ export const useUserStore = create((set, get) => ({
   signup: async (name, email, password, password_confirmation) => {
     set({ loading: true });
 
-    console.log(name, email, password, password_confirmation);
-
     if (password !== password_confirmation) {
       set({ loading: false });
       return toast.error("Password do not match.");

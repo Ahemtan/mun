@@ -9,12 +9,13 @@ import RootLayout from './components/layout/RootLayout'
 import RegisterLayout from './components/layout/RegisterLayout'
 import FormRegisterPage from './pages/FormRegisterPage'
 import { useUserStore } from './store/useUserStore'
+import NotFound from './pages/NotFound'
 const App = () => {
 
   const { loading } = useUserStore();
 
   if(loading) {
-    return <h1>Loagin...</h1>
+    return <h1>Loading...</h1>
   }
   
   return (
@@ -27,6 +28,7 @@ const App = () => {
 
         <Route path='/' element={<RootLayout />}>
           <Route index element={<HomePage />} /> 
+          <Route path='*' element={<NotFound />} /> 
         </Route>
 
         <Route path='/register' element={<RegisterLayout />}>
