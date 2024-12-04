@@ -1,24 +1,22 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react';
 import { useUserStore } from '../../store/useUserStore';
-import { Outlet, useNavigate } from "react-router-dom"
+import { Outlet, useNavigate } from 'react-router-dom';
+
 const AuthLayout = () => {
-
     const navigate = useNavigate();
-
     const { checkAuth, user } = useUserStore();
-
 
     useEffect(() => {
         checkAuth();
-    }, [])
+    }, [checkAuth]);
 
-    if(user) {
-        return navigate("/")
-    }
+    useEffect(() => {
+        if (user) {
+            navigate('/');
+        }
+    }, [user, navigate]);
 
-    return (
-        <Outlet />
-    )
-}
+    return <Outlet />;
+};
 
-export default AuthLayout
+export default AuthLayout;

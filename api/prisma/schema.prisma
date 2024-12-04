@@ -16,6 +16,7 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  form     Form?
   bookings Bookings[]
 }
 
@@ -27,7 +28,7 @@ model Event {
   desc      String
   extraInfo String
   maxGuests Int
-  Date String
+  Date      String
   price     Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -46,6 +47,16 @@ model Bookings {
 
   user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
   Event Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+}
+
+model Form {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  name   String
+  phone  Int
+  email  String
+  userId String @unique @db.ObjectId
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 enum Role {

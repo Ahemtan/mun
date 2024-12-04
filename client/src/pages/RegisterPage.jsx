@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useUserStore } from '../store/useUserStore';
 import { LoaderCircle } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const RegisterPage = () => {
 
-  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -51,7 +50,7 @@ const RegisterPage = () => {
           <button disabled={loading} type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full flex items-center justify-center">{loading ? <LoaderCircle className='animate-spin' /> : "Sign Up"}</button>
         </form>
         <div className="mt-6 text-blue-500 text-center">
-          <Link to="/login" className="hover:underline">Sign in Here! 👋</Link>
+          <Link to="/auth/login" className="hover:underline">Sign in Here! 👋</Link>
         </div>
       </div>
 

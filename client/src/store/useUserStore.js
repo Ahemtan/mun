@@ -31,10 +31,9 @@ export const useUserStore = create((set, get) => ({
 
       toast.success("Signup successful login now");
       return window.location.replace("/auth/login");
-
     } catch (error) {
       set({ loading: false });
-      const { message, statusCode } = handleApiError(error);
+      const { message } = handleApiError(error);
       toast(message);
     }
   },
@@ -51,7 +50,7 @@ export const useUserStore = create((set, get) => ({
       return window.location.replace("/");
     } catch (error) {
       set({ loading: false });
-      const { message, statusCode } = handleApiError(error);
+      const { message } = handleApiError(error);
 
       toast.error(message);
     }
@@ -63,8 +62,10 @@ export const useUserStore = create((set, get) => ({
       const res = await axios.get("/users/me");
       set({ user: res.data.user, checkingAuth: false });
     } catch (error) {
+      if (error.status === 401) {
+        return null;
+      }
       set({ checkingAuth: false, user: null });
-      const { message, statusCode } = handleApiError(error);
     }
   },
 
@@ -74,7 +75,8 @@ export const useUserStore = create((set, get) => ({
       set({ user: null });
       window.location.replace("/auth/login");
     } catch (error) {
-     return null
+      set({ user: null, checkingAuth: false });
+      throw error;
     }
   },
 
