@@ -1,47 +1,47 @@
+import { useEffect } from 'react'
+
+
+import { Routes, Route, Navigate } from "react-router-dom"
 import { Toaster } from 'react-hot-toast'
 
-import { Routes, Route } from "react-router-dom"
+import { useUserStore } from './store/useUserStore'
+
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
-import AuthLayout from './components/layout/AuthLayout'
 import RootLayout from './components/layout/RootLayout'
-import RegisterLayout from './components/layout/RegisterLayout'
 import FormRegisterPage from './pages/FormRegisterPage'
-import { useUserStore } from './store/useUserStore'
 import NotFound from './pages/NotFound'
+import LoaderComponent from './components/loader'
+
 const App = () => {
 
-  const { loading } = useUserStore();
+  const { checkingAuth, checkAuth, user } = useUserStore();
 
-  if(loading) {
-    return <h1>Loading...</h1>
-  }
-  
+  useEffect(() => {
+    checkAuth();
+  }, [checkAuth])
+
+  if(checkingAuth) return <LoaderComponent />
+
   return (
     <>
       <Routes>
-        <Route path="/auth/" element={<AuthLayout />}>
-          <Route path='login' element={<LoginPage />} />
-          <Route path='register' element={<RegisterPage />} />
-        </Route>
+        <Route path='/auth/login' element={user ? <Navigate to={'/'} /> : <LoginPage />} />
+        <Route path='/auth/register' element={user ? <Navigate to={'/'} /> : <RegisterPage />} />
+
+
 
         <Route path='/' element={<RootLayout />}>
-          <Route index element={<HomePage />} /> 
-          <Route path='*' element={<NotFound />} /> 
+          <Route index element={<HomePage />} />
+          <Route path='*' element={<NotFound />} />
+          <Route path='register' element={user ? <FormRegisterPage /> : <Navigate to={'/auth/login'} />} />
         </Route>
 
-        <Route path='/register' element={<RegisterLayout />}>
-          <Route index element={<FormRegisterPage />} /> 
-        </Route>
-
-
-        <Route path="/dashboard" element={<h1>Dashboard</h1>} />
-        
       </Routes>
 
       <Toaster />
-    
+
     </>
   )
 }

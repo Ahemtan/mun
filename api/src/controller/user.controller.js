@@ -118,8 +118,12 @@ export const logoutHandler = catchAsyncError(async (req, res, next) => {
 });
 
 export const getProfileHandler = catchAsyncError(async (req, res, next) => {
-  res.status(200).json({
-    user: req.user,
-    accessToken: req.cookies.accessToken
-  });
+  try { 
+    res.status(200).json({
+      user: req.user,
+      accessToken: req.cookies.accessToken
+    }); 
+  } catch (error) {
+    console.log(error)
+  }
 });

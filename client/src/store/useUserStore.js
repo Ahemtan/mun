@@ -60,9 +60,6 @@ export const useUserStore = create((set, get) => ({
       const res = await axios.get("/users/me");
       set({ user: res.data.user, checkingAuth: false });
     } catch (error) {
-      if (error.status === 401) {
-        return null;
-      }
       set({ checkingAuth: false, user: null });
     }
   },
