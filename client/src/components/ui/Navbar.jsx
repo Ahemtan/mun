@@ -48,7 +48,7 @@ const Navbar = () => {
                                     <ScrollLink className="text-gray-500 transition hover:text-gray-500/75 cursor-pointer" offset={-59} to="about" smooth>About</ScrollLink>
                                 </li>
                                 <li>
-                                    <Link className="text-gray-500 transition hover:text-gray-500/75" to={"/"}>Contact</Link>
+                                    <ScrollLink className="text-gray-500 transition hover:text-gray-500/75 cursor-pointer" offset={-50} to="contact" smooth>Contact</ScrollLink>
                                 </li>
                                 <li>
                                     <Link className="text-gray-500 transition hover:text-gray-500/75" to="/register">Register</Link>

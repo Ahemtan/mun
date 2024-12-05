@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Contact from '../components/Contact'
 
 const HomePage = () => {
 
@@ -14,7 +15,7 @@ const HomePage = () => {
             <div className="mx-auto max-w-xl text-center">
               <h1 className="text-3xl font-extrabold sm:text-5xl">
                 Be Part of Use
-                <strong className="font-extrabold text-primary sm:block"> Increase <span className='text-secondary'>Conversion .</span></strong>
+                <strong className="font-extrabold text-primary sm:block"> Increase <span className='text-secondary'>Conversion.</span></strong>
               </h1>
 
               <p className="mt-4 sm:text-xl/relaxed">
@@ -41,7 +42,7 @@ const HomePage = () => {
         </section>
       </div>
 
-      <section id='about'>
+      <section id='about' className='bg-gray-100'>
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
             <div>
@@ -69,6 +70,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <Contact />
+
     </>
   )
 }

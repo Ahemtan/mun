@@ -4,6 +4,7 @@ import { handleApiError } from '../lib/errorhandler';
 import toast from 'react-hot-toast';
 import { LoaderCircle } from 'lucide-react';
 import { useFormStore } from '../store/useFormStore';
+import LoaderComponent from '../components/loader';
 const RegisterPage = () => {
 
   const { createForm, loading, form, getForm } = useFormStore();
@@ -22,6 +23,8 @@ const RegisterPage = () => {
 
     createForm(formData.name, formData.email, formData.phone);
   }
+
+  if(loading) return <LoaderComponent />
 
   return (
     <section className='container h-screen m-auto'>
