@@ -15,7 +15,7 @@ const HomePage = () => {
             <div className="mx-auto max-w-xl text-center">
               <h1 className="text-3xl font-extrabold sm:text-5xl">
                 Be Part of Use
-                <strong className="font-extrabold text-primary sm:block"> Increase <span className='text-secondary'>Conversion.</span></strong>
+                <strong className="font-extrabold text-primary sm:block"> Connecting Minds <span className='text-secondary'>Shaping Futures</span></strong>
               </h1>
 
               <p className="mt-4 sm:text-xl/relaxed">
