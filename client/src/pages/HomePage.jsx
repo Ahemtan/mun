@@ -19,7 +19,7 @@ const HomePage = () => {
               </h1>
 
               <p className="mt-4 sm:text-xl/relaxed">
-                Model UN simulations engage hundreds of thousands of students each year, helping them to learn more about the principles of the UN and how it functions.
+                JOIN US ON JANUARY 9, 10, 11 to give life to diplomacy and change yours along with it
               </p>
 
               <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -53,9 +53,10 @@ const HomePage = () => {
                 </h1>
 
                 <p className="mt-4 text-gray-700 text-xl max-w-[400px]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque saepe
-                  architecto maiores repudiandae amet perferendis repellendus, reprehenderit voluptas
-                  sequi.
+                  In Model UN conferences, participants strive to think beyond the box and the 4 walls of a classroom. Excelling beyond the finite pages of a textbook, students shall represent countries all over the world as civil UN diplomats and tackle ongoing complex globally acclaimed issues. 
+                  Kathmandu Model College located in the heart of Kathmandu; Bagbazar also proudly hosts Kathmandu Model College Model United Nations 2025. KMC MUN 2025 brings you all an excellent opportunity to stimulate UN committees, and debates on global issues and develop negotiation and resolution-based skills. Via KMC MUN 2025 and its global exposure, minds from all over Nepal and beyond shall come together in common ground to exchange ideas and share meaningful debates. This shall be one of the greatest platforms for students to excel in critical thinking, public spelling, and leadership. 
+                  The floor of delegation is open to students from grade 8 to 12
+.
                 </p>
               </div>
             </div>

@@ -13,8 +13,9 @@ const Footer = () => {
                         </div>
 
                         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa
-                            cum itaque neque.
+                            Striving for a change with people all over the nation and beyond, KMC MUN provides an opportunity to believe that the future needs dutiful and knowledgeable minds like yours.
+                            Connecting minds, Shaping future
+
                         </p>
                     </div>
 
