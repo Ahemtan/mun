@@ -58,7 +58,8 @@ const Footer = () => {
                 </ul>
 
                 <p className="mt-12 text-center text-sm text-gray-500">
-                    Copyright &copy; Ahemtan 2022. All rights reserved.
+                    Copyright &copy; KMC MUN. All rights reserved.
+                    Designed By Aayurti Creative Studio.
                 </p>
             </div>
         </footer>
