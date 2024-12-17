@@ -15,7 +15,7 @@ const Contact = () => {
                         <div className="mt-8">
                             <a href="#" className="text-2xl font-bold text-primary"> 0151 475 4450 </a>
 
-                            <address className="mt-2 not-italic">282 Kevin Brook, Imogeneborough, CA 58517</address>
+                            <address className="mt-2 not-italic">Kathmandu Model Secondary School, Bagbazar, Kathmandu</address>
                         </div>
                     </div>
 
