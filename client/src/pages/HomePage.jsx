@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
 
+
 const HomePage = () => {
 
   return (
@@ -13,7 +14,7 @@ const HomePage = () => {
         <section className="bg-gradient-to-b" id='hero'>
           <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center ">
             <div className="mx-auto max-w-xl text-center">
-              <h1 className="text-3xl font-extrabold sm:text-5xl">
+              <h1 className="text-3xl font-light text-gray-800 font-kanit sm:text-5xl">
                 Be Part of Us
                 <strong className="font-extrabold text-primary sm:block"> Connecting Minds <span className='text-secondary'>Shaping Futures</span></strong>
               </h1>
