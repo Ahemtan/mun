@@ -25,7 +25,7 @@ const HomePage = () => {
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <Link
                   className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-indigo/90 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-                  to="/register"
+                  to="https://forms.gle/dqtQTaDPVhfsCKPX6"
                 >
                   Register Now
                 </Link>
