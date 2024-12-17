@@ -24,20 +24,20 @@ const HomePage = () => {
 
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <Link
-                  className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-indigo/90 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+                  className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-indigo/90 focus:outline-none focus:ring active:bg-#f6941f sm:w-auto"
                   to="https://forms.gle/dqtQTaDPVhfsCKPX6"
                 >
                   Delegate Registration
                 </Link>
                 <Link
-                  className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-indigo/90 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-                  to=""
+                  className="block w-full rounded bg-#f6941f px-12 py-3 text-sm font-medium text-white shadow hover:bg-indigo/90 focus:outline-none focus:ring active:bg-#f6941f sm:w-auto"
+                  to="https://forms.gle/VdfED69rM4TfjjWo6"
                 >
                   Dais Registration
                 </Link>
 
                 <Link
-                  className="block w-full rounded px-12 py-3 text-sm font-medium text-primary shadow hover:text-indigo/90 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+                  className="block w-full rounded px-12 py-3 text-sm font-medium text-primary shadow hover:text-indigo/90 focus:outline-none focus:ring active:text-#f6941f sm:w-auto"
                   to="#"
                 >
                   Learn More
