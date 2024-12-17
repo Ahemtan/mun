@@ -27,7 +27,13 @@ const HomePage = () => {
                   className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-indigo/90 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
                   to="https://forms.gle/dqtQTaDPVhfsCKPX6"
                 >
-                  Register Now
+                  Delegate Registration
+                </Link>
+                <Link
+                  className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-indigo/90 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+                  to=""
+                >
+                  Dais Registration
                 </Link>
 
                 <Link
