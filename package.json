@@ -36,5 +36,8 @@
     "pino": "^9.4.0",
     "pino-pretty": "^11.2.2",
     "prisma": "^5.19.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.16"
   }
 }
