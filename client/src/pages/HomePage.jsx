@@ -30,7 +30,7 @@ const HomePage = () => {
                   Delegate Registration
                 </Link>
                 <Link
-                  className="block w-full rounded bg-#f6941f px-12 py-3 text-sm font-medium text-white shadow hover:bg-indigo/90 focus:outline-none focus:ring active:bg-#f6941f sm:w-auto"
+                  className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-indigo/90 focus:outline-none focus:ring active:bg-#f6941f sm:w-auto"
                   to="https://forms.gle/VdfED69rM4TfjjWo6"
                 >
                   Dais Registration
