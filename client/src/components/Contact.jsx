@@ -7,15 +7,13 @@ const Contact = () => {
                 <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
                     <div className="lg:col-span-2 lg:py-12">
                         <p className="max-w-xl text-lg">
-                            At the same time, the fact that we are wholly owned and totally independent from
-                            manufacturer and other group control gives you confidence that we will only recommend what
-                            is right for you.
+                            KMC MUN strongly commits to fostering delegates a beginner-friendly experience of diplomacy and delegation from scratch. We promise to build bridges rather than walls via diplomacy. You're just one click away to begin your very own 2025 with a blend of diplomacy and entertainment.
                         </p>
 
                         <div className="mt-8">
-                            <a href="#" className="text-2xl font-bold text-primary"> 0151 475 4450 </a>
+                            <a href="#" className="text-2xl font-bold text-primary"> Divyam Jha <br /> Secretary General </a>
 
-                            <address className="mt-2 not-italic">Kathmandu Model Secondary School, Bagbazar, Kathmandu</address>
+                            <address className=" text-1xl mt-2 not-italic font-regular font-kanit">Kathmandu Model Secondary School, <br /> Bagbazar, Kathmandu <br /> +977 9865491485 </address>
                         </div>
                     </div>
 
