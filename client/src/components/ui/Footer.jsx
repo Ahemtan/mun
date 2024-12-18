@@ -59,7 +59,8 @@ const Footer = () => {
 
                 <p className="mt-12 text-center text-sm text-gray-500">
                     Copyright &copy; KMC MUN. All rights reserved.
-                    Designed By Aayurti Creative Studio.
+                    Designed by Aayurti Creative Studio.
+                    Developed by Ahemtan & Saksham Banjade
                 </p>
             </div>
         </footer>
